@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Prioritites</title>
+    
+    <style>
+        p{
+            font-size: 70px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-style: italic;
+            color: violet;
+            background-color: blanchedalmond;
+        }
+
+        .mytag{
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #myid{
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 class="mytag" style="color: brown; font-size: 2em; font-family: 'Times New Roman', Times, serif;">Inline css is used to style individual tags</h1>
+    <p class="mytag">Internal css is used to style entire page at once</p>
+    <p id="myid">Style tag is used inside head tag for using internal css</p>
+    <p class="mytag" id="myid">Priority : ID Selector > Class Selector > Name Selector</p>
+</body>
+</html>

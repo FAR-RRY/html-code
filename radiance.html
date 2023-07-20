@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RADIANCE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <style>
+    
+    
+    header{
+        background-image: url(https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-4/12088-BEAUTY_-_EXPLAINER_-_Skin_Myths-header-1296x728.jpg?w=1155&h=1528);
+        background-size: fill;
+        padding: 200px 0;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        
+    
+    }
+    body{
+        background-image: linear-gradient(to bottom, #fbebf5 0%, #fbebf5 100%, #e6d6e0 100%, #e6d6e0 150%);
+        font-family: fantasy;
+    }
+    .card{
+        background-color: rgba(250, 235, 215, 0.552);
+        opacity: 90%;
+        box-shadow:  2px 1px rgba(108, 104, 104, 0.478);
+    }
+
+
+    .card, .card-footer{
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+
+    }
+    .card .card-body, .card-footer{
+        transform: translateZ(50px);}
+    .btn-primary,
+    .btn-primary:active,
+    .btn-primary:visited {
+     background-color: #8064A2 !important;
+    }
+
+    .btn-primary:hover {
+    background-color: #8064A2 !important;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    border: #8064A2;
+    }
+    .text-warning{
+        color: #8064A2;
+    }
+    .categories{
+        padding-left: 8%;
+        padding-top: 5%;
+    }
+    
+    
+    
+    
+     
+     
+     .logo-footer {
+        margin-bottom: 40px;
+     }
+     footer {
+            color: rgb(64, 31, 31);
+            
+     }
+     footer p, a {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+footer h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    position: relative;
+}
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: rgb(158, 76, 181);
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+     .btn-footer {
+                 color: rgb(158, 76, 181);
+              
+                text-decoration: none;
+                border: 1px solid;
+                border-radius: 43px;
+                font-size: 13px;
+                padding: 7px 30px;
+                line-height: 47px;
+     }
+     .btn-footer:hover {
+                
+                text-decoration: none;
+               
+     }
+    .form-footer input[type="text"] {
+        border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+    
+}
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+ .form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+        margin-left: -5px;
+    color: #cea1c3;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+     
+
+     footer ul li {
+    list-style: none;
+    display: block;
+}
+  footer ul  {
+   padding-left: 0;
+}
+footer ul  li a{
+  text-decoration: none;
+  color: rgb(64, 31, 31);
+  text-decoration:none;
+}
+a:hover {
+    text-decoration: none;
+    color: #f5f5f5 !important;
+    
+}
+.logo-part {
+    border-right: 1px solid rgb(158, 76, 181);
+    height: 100%;
+    }
+    .navbar{
+        background-image: url(https://i.pinimg.com/564x/d5/ae/ad/d5aeade4c75b17033d03c0ab3cc053c8.jpg);
+        background-size: fill;
+        
+    }
+    </style>
+
+
+</head>
+  <body>
+    <header>
+        <main><h1 class="frame__pagetitle text-center" style="font-size:500%; color: rgb(247, 215, 176); text-shadow: 3px 3px #f6aada;" >Radiance.</h1></main>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="opacity: 50%; ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Radiance.</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Track Order</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Shop All
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">shop by category</a></li>
+                      <li><a class="dropdown-item" href="#">shop by concern</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">other</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+          
+        <div class="container">
+          <p class="display-4 text-end page-title" style="color:rgb(165, 164, 164); text-shadow: 3px 3px 3px white;">One Stop For All Skin Problems!</p>
+          <p class="display-6 text-end page-description" style="font-family: Arial, Helvetica, sans-serif; font-size:large; color: rgb(210, 151, 151); text-shadow: 1px 1px #8064A2;">Meet the curated collection: our most natural collection featuring clean and organic ingredients.</p>
+          
+      
+
+          <div class="input-group mt-1 search-input">
+              <input type="text" class="form-control form-control-lg" placeholder="Search by concern...">
+              <button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass fa-beat-fade"></i> Search</button>
+          
+                  
+          </div>
+        </div>
+  </header>
+  
+
+
+
+
+
+  <h2 class="categories fw-3" style="color: rgba(86, 79, 79, 0.879);">Shop All</h2>
+  
+
+    <div class="container pt-5">
+    <div class="row row-cols-1 row-cols-md-3 mx-auto">
+        <div class="col mb-4">
+           
+          <div class="card h-70">
+            <img src="https://img.freepik.com/free-photo/skin-products-arrangement-wooden-blocks_23-2148761445.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                
+              <h5 class="card-title" style="color:rgb(142,134,204);">face balm</h5>
+              <p class="card-text">
+                <h3>light-weight creme</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(100+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 1100</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+                 
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+            
+          <div class="card h-70">
+            <img src="https://lh4.googleusercontent.com/nDMbcXJT87OnqfnKNr4kuKiapT22V4tB7ma9N66IU8GCx2ayfZsxtT5Afh0EGesp7OqnCdGoJ475yMdR5DAFab9J1UL1GmzXlu52zBirnxQtJD1uPug5ikGdEmSJOY1WbiH1GW7T" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">cleanser</h5>
+              <p class="card-text">
+                <h3>light-weight creme</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(150+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 799</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-70">
+            <img src="https://img.freepik.com/premium-photo/front-view-skin-oil-droppers-face-cream-recipients-arrangement_23-2148761447.jpg?w=360" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">face oil</h5>
+              <p class="card-text">
+                <h3>assorted oil</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(750+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 1299</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/beauty-products-recipients-assortment-grey-stones_23-2148761390.jpg?size=626&ext=jpg&ga=GA1.1.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">face tonic</h5>
+              <p class="card-text">
+                <h3>glow toners</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(350+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 509</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+      
+      
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/minimal-skincare-tube-mockup-png-beauty-product-packaging_53876-110841.jpg?size=626&ext=jpg&ga=GA1.2.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">moisturiser</h5>
+              <p class="card-text">
+                <h3>hydration creme</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(100+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 1100</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/cosmetic-jars-minimal-background_53876-143168.jpg?size=626&ext=jpg&ga=GA1.2.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">exfoliant</h5>
+              <p class="card-text">
+                <h3>natural scrubs</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(100+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 1100</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="https://img.freepik.com/free-photo/top-view-containers-arrangement_23-2148978196.jpg?size=626&ext=jpg&ga=GA1.1.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">organic fragrance</h5>
+              <p class="card-text">
+                <h3>fresh flower extract scents</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(650+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 2990</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card h-80">
+            <img src="https://img.freepik.com/free-photo/beauty-products-recipients-assortment-beige-stones_23-2148761387.jpg?size=626&ext=jpg&ga=GA1.1.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">bodywash</h5>
+              <p class="card-text">
+                <h3>fruit based bodywash</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(70+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 499</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card h-100">
+              <img src="https://img.freepik.com/free-photo/close-up-body-butter-recipient_23-2148543010.jpg?size=626&ext=jpg&ga=GA1.1.1645983365.1688966311&semt=ais" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color:rgb(142,134,204);">spot reduction</h5>
+              <p class="card-text">
+                <h3>mild acid based spot reducer</h3>
+                <p class="fw" style="opacity: 70%;">
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>
+                    <i class="fa-solid fa-heart text-danger"></i>(190+ ratings)
+                
+                <h4 class="text-end" style="font-size: small;">from</h4>
+                        <h2 class="text-end">₹ 1470</h2>
+                </p>
+                <div class="card-footer">
+                    <button class="btn btn-primary"><i class="fa-solid fa-bolt fa-bounce"></i> Buy Now</button>
+                    <button class="btn btn-danger"><i class="fa-solid fa-cart-shopping fa-fade"></i> Add To Cart</button></div>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <footer class="container-fluid  py-5" style="background-color: #b49ecfdc; ">
+        <div class="container ">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="row">
+                    <div class="col-md-6 ">
+                       <div class="logo-part">
+                          <img src="https://i.pinimg.com/236x/2d/32/82/2d328281e996da90a5dd548e26467b7c.jpg" class="w-50 logo-footer" >
+                          <p><b>Adress:</b>7637 Laurel, PA 19406</p>
+                          <p>Email:rAdIaNcE@gmail.com</p>
+                          <P>Phone Number:0000000</P>
+                          <p></p>
+                       </div>
+                    </div>
+                    <div class="col-md-6 px-4">
+                       <h6> About Company</h6>
+                       <p>Serve only the best and cleanest sourced products.</p>
+                       <a href="#" class="btn-footer"> More Info </a><br>
+                       <a href="#" class="btn-footer"> Contact Us</a>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-md-6">
+                 <div class="row">
+                    <div class="col-md-6 px-4">
+                       <h6> Help us</h6>
+                       <div class="row ">
+                          <div class="col-md-6">
+                             <ul>
+                                <li> <a href="#"> Home</a> </li>
+                                <li> <a href="#"> About</a> </li>
+                                <li> <a href="#"> Service</a> </li>
+                                <li> <a href="#"> Team</a> </li>
+                                <li> <a href="#"> Help</a> </li>
+                                <li> <a href="#"> Contact</a> </li>
+                             </ul>
+                          </div>
+                          <div class="col-md-6 px-4">
+                             <ul>
+                                
+                                <li> <a href="#"> Terms</a> </li>
+                                <li> <a href="#"> Policy</a> </li>
+                                <li> <a href="#"> Refunds</a> </li>
+                                <li> <a href="#"> Paypal</a> </li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-md-6 ">
+                       <h6> Newsletter</h6>
+                       <h6>Sign up for our newsletter to get updates about the latest finds.</h6>
+                       
+                       
+                       <form class="form-footer my-3">
+                          <input type="text"  placeholder="email here...." name="email">
+                          <input type="button" value="Go" >
+                       </form>
+                       <p></p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        </footer>
+      
+      <!--<div class="foot" style="border-top: 2px solid #967cb5; background-color: #c0b1d3; position:absolute;">
+        
+       
+        
+        <h4 class="m-5 pt-5 " style="font-family:'Times New Roman', Times, serif; color: #fbebf5;"></h4>
+        <h5 class="m-5 " style="font-family: Georgia, 'Times New Roman', Times, serif; color: #fbebf5;">Contact Support</h5>
+        <p class="m-5 pt-1">Get help with you order account and more.</p>   
+       <img src="" alt="">
+    
+      </div>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        ScrollReveal().reveal('.page-title',{
+            delay: 500,
+            origin: 'bottom',
+            distance: '50px',
+            scale: 0.5,
+        });
+        ScrollReveal().reveal('.search-input',{
+            delay: 500,
+            origin: 'left',
+            distance: '50px',
+            //scale: 0.5,
+        });
+        ScrollReveal().reveal('.card',{
+        
+            origin: 'top',
+            distance: '500px',
+            interval: 300,
+            
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init( document.querySelectorAll('.card'),{
+            max: 5,
+            speed: 400,
+            scale: 0.9,
+            glare: true
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
