@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE TICKET BOOKING</title>
+</head>
+<body>
+    <h1>MOVIE TICKET BOOKING</h1>
+    <form>
+        <b>TICKET DETAILS:</b>
+        <br>
+        <label for="movie">Select a movie:</label>
+        <select id="movie" name="movie">
+          <option> INTERSTELLAR</option>
+          <option>FOREST GUMP</option>
+          <option>SHUTTER ISLAND</option>
+        </select>
+        <br>
+        <label for="seats">Number of Seats:</label>
+        <input type="number" id="seats" name="seats" min="1" required>
+        <br>
+        <label for="DOS"> Date of Show:</label>
+        <input type="date" />
+    </br>
+        <label for="time">Time Of Show:</label>
+        <input type="time" id="time" name="time" required>
+    </br>
+</br>
+<b>CUSTOMER DETAILS:</b>
+</br>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+</br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+<br>
+ <label for="conatct no.">Your Contact No.:</label>
+<input type="number" required>
+</br>
+<br>
+       
+<b>PAYMENT DETAIL:</b>
+</br>
+    <label for="payment">Payment Method:</label>
+    <select id="payment" name="payment">
+        <option> CREDIT CARD</option>
+        <option> DEBIT CARD</option>
+        <option> UPI TRANSACTION</option>
+    </select>
+</br>
+    <input type="submit" value="Book Tickets">
+        </form>
+    </body>
+    </html>
+</body>
+</html>
