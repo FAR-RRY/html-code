@@ -1,0 +1,4 @@
+
+// addblog
+// getbyid
+// getall
