@@ -1,9 +1,49 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import useUserContext from "../UserContext";
 
 const Navbar = () => {
+
+  const [currentUser, setcurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem('user'))
+  );
+
+  const { loggedIn, logout } = useUserContext();
+
+  const showLoginOptions = () => {
+    if (currentUser !== null || loggedIn ) {
+      return (
+        <>
+          <li className="nav-item">
+            <button className="btn btn-danger" onClick={logout} >Logout</button>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/profile">
+              Profile
+            </NavLink>    
+          </li>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/signup">
+              Signup
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/login">
+              Login
+            </NavLink>
+          </li>
+        </>
+      );
+    }
+  };
+  
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
       <a className="navbar-brand" href="#">
         Navbar
@@ -22,20 +62,13 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <NavLink className="nav-link"  to="/home">
+            <NavLink className="nav-link" to="/home">
               Home
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/roll">
-              SignUp
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/login">
-              Login
-            </NavLink>
-          </li>
+          
+          
+          
           <li className="nav-item">
             <NavLink className="nav-link" to="/event">
               Event Handling
@@ -52,68 +85,21 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-          <NavLink className="nav-link" to="/list">
-            Product List
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/user">
-            Manage User
-          </NavLink>
-        </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
+            <NavLink className="nav-link" to="/list">
+              Product List
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">
-              Disabled
-            </a>
+            <NavLink className="nav-link" to="/user">
+              Manage User
+            </NavLink>
           </li>
-        </ul>
-        <form className="d-flex" role="search">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
+          {showLoginOptions()}
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  
-  )
-}
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;

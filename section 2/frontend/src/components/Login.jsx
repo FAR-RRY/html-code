@@ -1,6 +1,10 @@
 import { useFormik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
+import useUserContext from '../UserContext';
+import Swal from 'sweetalert2';
+import {motion} from 'framer-motion';
+
  
  const LoginSchema = Yup.object().shape({
    
@@ -9,6 +13,8 @@ import * as Yup from 'yup';
  });
 
 const Login = () => {
+  
+  const {setLoggedIn} = useUserContext();
 
    // Initializing formik
    const loginForm = useFormik({
@@ -16,15 +22,58 @@ const Login = () => {
         email : "",
         password : ""
       },
-      onSubmit : ( values ) => { 
+      onSubmit : async ( values, {resetForm} ) => { 
         console.log(values);
-        // write code to submit form to server
+
+        const res = await fetch('http://localhost:5000/user/authenticate', {
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-Type' : 'application/json'
+          }
+        });
+        console.log(res.status);
+
+      if(res.status === 200){
+        Swal.fire({
+          icon : 'success',
+          title : 'Nice!',
+          text : 'Logged in Successfully 😎'
+        });
+
+        const data = await res.json();
+        sessionStorage.setItem('user', JSON.stringify(data) );
+        setLoggedIn(true);
+        resetForm();
+
+      }else if(res.status === 401){
+        Swal.fire({
+          icon : 'error',
+          title : 'Error',
+          text : 'Email or Password is incorrect 😢'
+        })
+      }else{
+        Swal.fire({
+          icon : 'error',
+          title : 'Error',
+          text : 'Something went wrong'
+        })
+      }
+
+      // write code to submit form to server
     },
+        
     validationSchema : LoginSchema
    });
 
     return (
-      <div>
+      <motion.div 
+      className="bg"
+        initial={{opacity: 0, x: '100%' }}
+        animate={{opacity: 1, x: 0}}
+        exit={{opacity: 0, x: '-100%'}}
+        transition={{duration: 0.3, type: 'spring', stiffness: 50, damping: 10}}>
+      
         <div className="w-25">
           <div className="card">
             <div className="card-body">
@@ -45,7 +94,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 
